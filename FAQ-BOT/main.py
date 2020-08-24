@@ -2,12 +2,12 @@ import discord
 from discord.ext import commands
 import platform
 
-token = "NzQ2ODU2MzU4OTUwODYyODQ4.X0GaLw.YoHm93ZlC-Z5x9oAw-EswTxWOOM"
+token = "NzQ2ODU2MzU4OTUwODYyODQ4.X0GaLw.Yp_PirBQKD_K1Qlm4Ypp05EnaSE"
 
 
 class Bot(commands.Bot):
     def __init__(self):
-        super().__init__(command_prefix="", pm_help=None, description="A real Boomer")
+        super().__init__(command_prefix="boomer!", pm_help=None, description="A real Boomer")
         self.bot_version = "1.0.0"
         self.bot_name = "Boomer"
         self.author = "woosal#1337"
@@ -15,6 +15,8 @@ class Bot(commands.Bot):
         self.getDeviceOs = platform.system()
 
         self.load_extension("commands.info")
+        self.load_extension("commands.admin")
+        self.load_extension("commands.seviliyorsun")
 
     async def on_ready(self):
         print("Boomer is wakin up...")
